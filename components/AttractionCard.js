@@ -16,7 +16,7 @@ const AttractionCard = ({ place }) => {
 
         {/* Card Description */}
         <div className="card-body">
-          <p className="card-text fs-5">{title}</p>
+          <p className="card-text">{title}</p>
         </div>
       </div>
     </div>
