@@ -2,6 +2,7 @@ import { createClient } from 'contentful'
 import Image from 'next/image'
 import Gallery from '../../components/Gallery'
 import Navbar from '../../components/Navbar'
+import AttractionCard from '../../components/AttractionCard'
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -36,15 +37,12 @@ export const getStaticProps = async ({ params }) => {
 const PlacesDetails = ({ place }) => {
   const { fields: { description, featuredImage, gallery, placesToVisit, tagline, thumbnail, title }} = place;
 
-  console.log(place.fields);
-
   return (
     <div>
       <Navbar/>
       <div className="w-75 p-3" style={{ margin: 'auto', textAlign: 'center' }}>
         <p className="fs-1">{title}</p>
         <p className="fs-3">{`"${tagline}"`}</p>
-        <p className="fs-6">{description}</p>
 
         <Image
           src={"https:" + thumbnail.fields.file.url}
@@ -53,6 +51,18 @@ const PlacesDetails = ({ place }) => {
           height={thumbnail.fields.file.details.image.height}
         />
 
+        <p className="fs-6 pt-4">{description}</p>
+        <p className="fs-3 pt-5" style={{ textAlign: 'left' }}>Places to visit</p>
+
+        <div className="py-4">
+          <div className="container">
+            <div className="row">
+              {placesToVisit.map((place) => (
+                <AttractionCard key={place.sys.id} place={place} />
+              ))}
+            </div>
+          </div>
+        </div>
         {/* <Gallery gallery={gallery} /> */}
       </div>
     </div>

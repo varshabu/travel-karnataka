@@ -19,7 +19,7 @@ const PlaceCard = ({ place }) => {
         {/* Card Description */}
         <div className="card-body">
           <p className="card-text fs-3">{title}</p>
-          <p className="card-text fs-5">{`"${tagline}"`}</p>
+          <p className="card-text fs-6">{`"${tagline}"`}</p>
           <Link href={'/places/' + slug}><a className="btn btn-danger">Click here to know more</a></Link>
         </div>
       </div>
