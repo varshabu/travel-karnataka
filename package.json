@@ -9,9 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bootstrap": "^5.0.0-beta3",
+    "content": "^4.0.6",
+    "contentful": "^8.4.2",
     "next": "11.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-suitcss": "^15.0.0",
+    "stylelint-no-unsupported-browser-features": "^5.0.1"
   },
   "devDependencies": {
     "eslint": "7.30.0",
