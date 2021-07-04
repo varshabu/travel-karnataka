@@ -42,7 +42,7 @@ const PlacesDetails = ({ place }) => {
       <Navbar/>
       <div className="w-75 p-3" style={{ margin: 'auto', textAlign: 'center' }}>
         <p className="fs-1">{title}</p>
-        <p className="fs-3">{`"${tagline}"`}</p>
+        <p className="fs-3">{tagline}</p>
 
         <Image
           src={"https:" + thumbnail.fields.file.url}
@@ -57,7 +57,7 @@ const PlacesDetails = ({ place }) => {
         <div className="py-4">
           <div className="container">
             <div className="row">
-              {placesToVisit.map((place) => (
+              {placesToVisit && placesToVisit.map((place) => (
                 <AttractionCard key={place.sys.id} place={place} />
               ))}
             </div>

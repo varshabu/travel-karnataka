@@ -18,9 +18,13 @@ const PlaceCard = ({ place }) => {
 
         {/* Card Description */}
         <div className="card-body">
-          <p className="card-text fs-3">{title}</p>
-          <p className="card-text fs-6">{`"${tagline}"`}</p>
-          <Link href={'/places/' + slug}><a className="btn btn-danger">Click here to know more</a></Link>
+          <p className="card-text fs-3" style={{ textDecoration: 'underline' }}>{title}</p>
+          <p className="card-text">{tagline}</p>
+          <div  style={{ textAlign: "right" }}>
+            <Link href={'/places/' + slug}>
+              <a className="btn btn-danger">Read more</a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
