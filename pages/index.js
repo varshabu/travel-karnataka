@@ -28,7 +28,7 @@ export default function Home({ places }) {
       {/* List all the places */}
       <div className="py-4">
         <div className="container">
-          <div className="row">
+          <div className="row row-cols-1 row-cols-md-3 g-4">
             {places.map((place) => (
                 <PlaceCard key={place.sys.id} place={place} />
               ))

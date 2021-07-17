@@ -3,7 +3,7 @@ import Image from 'next/image'
 const AttractionCard = ({ place }) => {
   const { thumbnail, title } = place.fields;
   return (
-    <div className="col-3 p-2">
+    <div className="col">
       <div className="card">
         {/* Card Image */}
         <Image

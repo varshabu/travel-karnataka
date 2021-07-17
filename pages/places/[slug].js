@@ -40,7 +40,7 @@ const PlacesDetails = ({ place }) => {
   return (
     <div>
       <Navbar/>
-      <div className="w-75 p-3" style={{ margin: 'auto', textAlign: 'center' }}>
+      <div className="p-md-5 p-sm-3 mx-md-5" style={{ margin: 'auto', textAlign: 'center' }}>
         <p className="fs-1">{title}</p>
         <p className="fs-3">{tagline}</p>
 
@@ -56,7 +56,7 @@ const PlacesDetails = ({ place }) => {
 
         <div className="py-4">
           <div className="container">
-            <div className="row">
+            <div className="row row-cols-1 row-cols-md-4 g-4">
               {placesToVisit && placesToVisit.map((place) => (
                 <AttractionCard key={place.sys.id} place={place} />
               ))}

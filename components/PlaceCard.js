@@ -5,7 +5,7 @@ const PlaceCard = ({ place }) => {
   const { fields: { description, slug, tagline, title, thumbnail } } = place;
 
   return (
-    <div className="col-4 p-2">
+    <div className="col">
       <div className="card">
         {/* Card Image */}
         <Image
